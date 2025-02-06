@@ -2,6 +2,16 @@
 
 This project demonstrates a minimal OCR pipeline using Tesseract OCR to process images or PDFs and extract text.
 
+## Example Outputs
+
+This repository includes example outputs for demonstration purposes:
+
+- Extracted text: `data/output/output.txt`
+- Converted images: `data/output/images/`
+
+You can view these outputs without setting up the environment to get an idea of the results achieved using a lightly modified version of OCR.
+
+
 ## Setup
 
 1. Clone the repository:

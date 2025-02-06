@@ -6,11 +6,10 @@ This project demonstrates a minimal OCR pipeline using Tesseract OCR to process 
 
 This repository includes example outputs for demonstration purposes:
 
-- Extracted text: `data/output/output.txt`
+- Extracted text: `data/output/` (e.g., `output.txt` or individual PDF text files)
 - Converted images: `data/output/images/`
 
-You can view these outputs without setting up the environment to get an idea of the results achieved using a lightly modified version of OCR.
-
+You can view these outputs without setting up the environment to get an idea of the results.
 
 ## Setup
 
@@ -30,11 +29,13 @@ You can view these outputs without setting up the environment to get an idea of 
    sudo apt install tesseract-ocr  # Install Tesseract
    ```
 
-3. Add your input file (PDF or image) to the `data/input/` folder.
+3. Add your input file(s) (PDF or image) to the `data/input/` folder.
 
 ## Usage
 
-Run the OCR script:
+### Process a Single File
+
+Run the `ocr_tesseract.py` script to process one file:
 
    ```bash
    python3 scripts/ocr_tesseract.py
@@ -42,15 +43,27 @@ Run the OCR script:
 
 The extracted text will be saved to `data/output/output.txt`.
 
+### Process Multiple Files
+
+Run the `process_multiple_pdfs.py` script to process all PDFs in the `data/input/` directory:
+
+   ```bash
+   python3 scripts/process_multiple_pdfs.py
+   ```
+
+The extracted text will be saved as separate `.txt` files in `data/output/`.
+
 ## Project Structure
 
 ```text
 tesseract-ocr-mvp/
 ├── data/
 │   ├── input/                # Input files (e.g., PDFs or images)
-│   ├── output/               # Extracted text files
+│   ├── output/               # Extracted text files and images
+│       ├── images/           # Generated images from PDF files
 ├── scripts/                  # Python scripts for OCR
-│   └── ocr_tesseract.py      # Main script for Tesseract OCR
+│   ├── ocr_tesseract.py      # Script to process a single file
+│   ├── process_multiple_pdfs.py  # Script to process all PDFs in input/
 ├── README.md                 # Project instructions
 ├── .gitignore                # Ignored files for GitHub
 ```

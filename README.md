@@ -16,7 +16,7 @@ You can view these outputs without setting up the environment to get an idea of 
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/LexiphanicStroon/tesseract_ocr/edit/main/README.md](https://github.com/LexiphanicStroon/tesseract_ocr.git)
+   git clone <repo-url>
    cd tesseract-ocr-mvp
    ```
 

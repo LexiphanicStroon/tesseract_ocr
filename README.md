@@ -1,4 +1,4 @@
-# Tesseract OCR MVP
+# Tesseract OCR
 
 This project demonstrates a minimal OCR pipeline using Tesseract OCR to process images or PDFs and extract text.
 
@@ -16,7 +16,7 @@ You can view these outputs without setting up the environment to get an idea of 
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/LexiphanicStroon/tesseract_ocr/edit/main/README.md
    cd tesseract-ocr-mvp
    ```
 
@@ -24,7 +24,7 @@ You can view these outputs without setting up the environment to get an idea of 
 
    ```bash
    sudo apt update
-   sudo apt install python3 python3-venv python3-pip libtesseract-dev libleptonica-dev tesseract-ocr
+   sudo apt install python3 python3-venv python3-pip libtesseract-dev libleptonica-dev tesseract-ocr poppler-utils
    ```
 
 3. Create a virtual environment and install dependencies:
@@ -70,10 +70,11 @@ tesseract-ocr-mvp/
 
 ## Notes
 
-- Ensure that `tesseract-ocr` is installed on your system. You can verify it by running:
+- Ensure that `tesseract-ocr` and `poppler-utils` are installed on your system. You can verify it by running:
 
    ```bash
    tesseract --version
+   pdfinfo --version
    ```
 
 - If you face issues with missing dependencies or packages, run the following:
